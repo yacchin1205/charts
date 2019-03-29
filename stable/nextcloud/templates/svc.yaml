@@ -11,10 +11,13 @@ spec:
   type: {{ .Values.serviceType }}
   {{- if eq .Values.serviceType "LoadBalancer" }}
   loadBalancerIP: {{ default "" .Values.nextcloudLoadBalancerIP }}
+  loadBalancerSourceRanges:
+  - "{{ .Values.nextcloudSourceRange }}"
   {{- end }}
   ports:
   - name: http
-    port: 80
+    port: 8080
     targetPort: 80
   selector:
     app: {{ template "nextcloud.fullname" . }}
+    run: nextcloud-appserver
