@@ -1,7 +1,9 @@
-name: nextcloud
-version: 0.1.1
 appVersion: 13.0.0
-description: A file sharing server that puts the control and security of your own data back into your hands.
+description: A file sharing server that puts the control and security of your own
+  data back into your hands.
+engine: gotpl
+home: https://nextcloud.com/
+icon: https://cdn.rawgit.com/docker-library/docs/defa5ffc7123177acd60ddef6e16bddf694cc35f/nextcloud/logo.svg
 keywords:
 - owncloud
 - nextcloud
@@ -9,11 +11,10 @@ keywords:
 - http
 - web
 - php
-home: https://nextcloud.com/
-icon: https://cdn.rawgit.com/docker-library/docs/defa5ffc7123177acd60ddef6e16bddf694cc35f/nextcloud/logo.svg
+maintainers:
+- email: opensource@keiran.scot
+  name: affix
+name: nextcloud
 sources:
 - https://github.com/nextcloud/server
-maintainers:
-- name: affix
-  email: opensource@keiran.scot
-engine: gotpl
+version: nextcloud0.0.5
