@@ -20,7 +20,7 @@ spec:
         run: auth-cas-appserver
     spec:
       containers:
-      - name: {{ template "nextcloud.fullname" . }}-app
+      - name: {{ template "auth_cas.fullname" . }}-app
         image: {{ .Values.image }}
         imagePullPolicy: {{ .Values.imagePullPolicy | quote }}
         env:
