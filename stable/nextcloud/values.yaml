@@ -3,8 +3,8 @@
 ##
 image:
   registry: docker.io
-  repository: nextcloud
-  tag: 13.0.4-apache
+  repository: 274050600818.dkr.ecr.us-west-2.amazonaws.com/yacchin1205/jx-test
+  tag: 0.0.11-nextcloud
   ## Specify a imagePullPolicy
   ## Defaults to 'Always' if image tag is 'latest', else set to 'IfNotPresent'
   ## ref: http://kubernetes.io/docs/user-guide/images/#pre-pulling-images
