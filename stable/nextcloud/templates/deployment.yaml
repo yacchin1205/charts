@@ -26,9 +26,6 @@ spec:
       - name: {{ template "nextcloud.fullname" . }}
         image: "{{ .Values.image.registry }}/{{ .Values.image.repository }}:{{ .Values.image.tag }}"
         imagePullPolicy: {{ .Values.image.pullPolicy | quote }}
-        command:
-        - /entrypoint.sh
-        - /cron.sh
         env:
         - name: ALLOW_EMPTY_PASSWORD
           value: {{ .Values.allowEmptyPassword | quote }}
