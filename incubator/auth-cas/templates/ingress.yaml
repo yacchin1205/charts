@@ -16,7 +16,7 @@ spec:
   - host: {{ .Values.authCASHost }}
     http:
       paths:
-      - path: /
+      - path: '/*'
         backend:
           serviceName: {{ template "auth_cas.fullname" . }}
           servicePort: http
