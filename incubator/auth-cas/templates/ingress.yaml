@@ -18,7 +18,7 @@ spec:
       paths:
       - path: /
         backend:
-          serviceName: auth-cas
+          serviceName: {{ template "auth_cas.fullname" . }}
           servicePort: http
 {{- if .Values.ingress.tls }}
   tls:
